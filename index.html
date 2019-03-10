@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Jenkins X - from zero to hero</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="img/malcolm-lightbody-522364-unsplash.jpg">
+					<!-- Splash screen -->
+				</section>
+				<section>
+					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg">
+						<textarea data-template>
+							## whomai
+						</textarea>
+					</section>
+					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg">
+						<textarea data-template>
+							### Joost van der Griendt
+
+							* Work for CloudBees
+							* Professional Services Consultant EMEA
+							* Hail from Utrecht, The Netherlands
+							* Call me `Jay`
+						</textarea>
+					</section>
+					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg">
+						<textarea data-template>
+							## background
+
+							* Java developer
+							* CI/CD
+							* Jenkins / Nexus / Sonar
+							* Docker / Docker Swarm / Kubernetes
+						</textarea>
+					</section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## SDLC
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## CI/CD
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## GitOps
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Kubernetes
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - Introduction
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - Go demo
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - Import demo
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - Create BuildPack
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - Build With Kaniko
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - ???
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Further steps
+					</textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			Reveal.configure({ slideNumber: true });
+		</script>
+	</body>
+</html>
