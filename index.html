@@ -27,6 +27,13 @@
 			<div class="slides">
 				<section data-background-image="img/malcolm-lightbody-522364-unsplash.jpg">
 					<!-- Splash screen -->
+					<h1>Jenkins X Workshop</h1>
+					<p>
+						<small>Created by <a href="joostvdg.github.io">Joost van der Griendt</a></small>
+					</p>
+					<p>
+						<small>Based on the work of <a href="https://jenkins-x.io/">Jenkins X</a> and <a href="https://technologyconversations.com/about/">Viktor Farcic</a></small>
+					</p>
 				</section>
 				<section>
 					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg">
@@ -34,7 +41,7 @@
 							## whomai
 						</textarea>
 					</section>
-					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg">
+					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg" data-background-size="contain">
 						<textarea data-template>
 							### Joost van der Griendt
 
@@ -44,7 +51,7 @@
 							* Call me `Jay`
 						</textarea>
 					</section>
-					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg">
+					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg" data-background-size="contain">
 						<textarea data-template>
 							## background
 
@@ -57,28 +64,213 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						## SDLC
+						## Where Is This?
+
+						!!! Include QR Code with link!!!
 					</textarea>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## CI/CD
-					</textarea>
+				<section>
+					<section data-background-image="img/evie-shaffer-556480-unsplash.jpg" data-background-size="contain">
+						<h1 style="color:darkorange;background-color: grey;opacity: 0.8;">SDLC</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## SDLC
+
+							**S**oftware **D**evelopment **L**ife**C**ycle
+
+							* People
+							* Process
+							* Technology
+
+							> From inception till it is OUT of Production.
+						</textarea>
+					</section>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## GitOps
-					</textarea>
+				<section>
+					<section data-background-image="img/sven-read-711423-unsplash.jpg" data-background-size="contain">
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">CICD</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## CI/CD
+
+							* Continous Integration
+							* Continous Delivery
+							* Continous Deployment
+							* Continous everything
+							* Progressive Delivery
+							* Agile/DevOps/GitOps...
+							
+							* versioning
+							* release notes
+							* issue trackers
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Today's requirements
+							
+							* It needs to be cloud-native
+							* It needs to be cloud-agnostic
+							* It needs to scale from zero to how much I need
+							* It needs to follow the everything-as-code principle
+							* Everything needs to integrate with everything
+							* It needs to be fast
+							* It needs to "just work"
+						</textarea>
+					</section>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Kubernetes
-					</textarea>
+
+				<section>
+					<section data-background-image="img/chuttersnap-458795-unsplash.jpg" data-background-size="contain">
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">Kubernetes</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Kubernetes, what?
+
+							> Kubernetes is a portable, extensible open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Kubernetes, why?
+
+							* Built on ops experience
+							* Modular
+							* API first
+							* Standardization
+							* Container Orchestration
+							* Proven
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Kubernetes Basics
+
+							* Workloads
+							* Services
+							* Storage
+							* Networking
+							* Lifecycle
+							* Scheduling
+							* Advanced Topics
+						</textarea>
+					</section>
+					<section data-background-image="img/kubernetes-basic.png" data-background-size="contain">
+						-
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Workloads
+
+							* Pod
+							* DaemonSet
+							* ReplicaSet
+							* Deployment
+							* StatefulSet
+							* (Cron)Jobs
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Pod
+
+							> A Pod is the basic building block of Kubernetes–the smallest and simplest unit in the Kubernetes object model that you create or deploy. A Pod represents a running process on your cluster.
+						</textarea>
+					</section>
+					<section data-background-image="img/pod.png" data-background-size="contain">
+						-
+					</section>
+					<section data-markdown>
+							<textarea data-template>
+								## Controllers
+	
+								>  Controller can create and manage multiple Pods for you, handling replication and rollout and providing self-healing capabilities at cluster scope.
+							</textarea>
+						</section>
+						<section data-markdown>
+								<textarea data-template>
+									## ReplicaSet
+
+									> A ReplicaSet’s purpose is to maintain a stable set of replica Pods running at any given time
+								</textarea>
+						</section>
+						<section data-markdown>
+								<textarea data-template>
+									## Deployment
+
+									> You describe a desired state in a Deployment object, and the Deployment controller changes the actual state to the desired state at a controlled rate.
+								</textarea>
+						</section>
+						<section data-markdown>
+								<textarea data-template>
+									## StatefulSet
+
+									> Like a Deployment , a StatefulSet manages Pods that are based on an identical container spec. Unlike a Deployment, a StatefulSet maintains a sticky identity for each of their Pods.
+								</textarea>
+						</section>
+						<section data-markdown>
+								<textarea data-template>
+									## Services
+
+									* Service
+									* Ingress
+								</textarea>
+						</section>
+						<section data-markdown>
+								<textarea data-template>
+									## Service
+									
+									> A Kubernetes Service is an abstraction which defines a logical set of Pods and a policy by which to access them - sometimes called a micro-service. The set of Pods targeted by a Service is determined by a Label Selector.
+								</textarea>
+						</section>
+						<section data-markdown>
+								<textarea data-template>
+									## Ingress
+
+									> An API object that manages external access to the services in a cluster, typically HTTP.
+
+									> Ingress can provide load balancing, SSL termination and name-based virtual hosting.
+								</textarea>
+						</section>
+						<section data-background-image="img/pod-full.png" data-background-size="contain">
+							-
+						</section>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Jenkins X - Introduction
-					</textarea>
+				<section>
+					<section data-background-image="img/jan-s-archive-1093662-unsplash.jpg" data-background-size="contain">
+						<h1 style="color:darkorange;background-color: grey;opacity: 0.8;">GitOps</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## GitOps
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-background-image="img/jenkins-x.svg" data-background-size="contain" >
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">Jenkins X</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Jenkins X - Introduction
+
+							* What is Jenkins Jenkins X
+							* Differences with Jenkins
+							* ...
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### What is Jenkins X
+
+							* Opinionated
+							* Re-imagining how to do CI/CD
+							* ...
+						</textarea>
+					</section>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
@@ -90,6 +282,53 @@
 						## Jenkins X - Import demo
 					</textarea>
 				</section>
+				<section>
+					<section data-background-image="img/david-clode-507068-unsplash.jpg" >
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">K8S Ecosystem</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Kubernetes Ecosystem
+
+							* Docker
+							* Helm
+							* Knative
+							* Skaffold
+							* Chartmuseum
+							* Tekton
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Docker
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Helm
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Knative
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Skaffold
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Chartmuseum
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Tekton
+						</textarea>
+					</section>
+				</section>
 				<section data-markdown>
 					<textarea data-template>
 						## Jenkins X - Create BuildPack
@@ -100,9 +339,41 @@
 						## Jenkins X - Build With Kaniko
 					</textarea>
 				</section>
+				<section>
+					<section data-background-image="img/markos-mant-672369-unsplash.jpg" >
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">K8S Advanced</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Kubernetes Advanced
+
+							* Scheduling
+							* Policies
+							* Admission Controllers
+							* Customization (CRD's)
+							* RBAC
+							* Platformization
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## ...
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-background-image="img/chuttersnap-1242453-unsplash.jpg" >
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">Serverless Jenkins</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Jenkins X - Serverless
+						</textarea>
+					</section>
+				</section>
 				<section data-markdown>
 					<textarea data-template>
-						## Jenkins X - ???
+						## Jenkins X - Extensions
 					</textarea>
 				</section>
 				<section data-markdown>
