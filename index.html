@@ -400,17 +400,46 @@
 					<section data-markdown>
 						<textarea data-template>
 							## GitOps
+
+							> *GitOps* is a way to do Continuous Delivery.  It works by using Git as a single source of truth for declarative infrastructure and applications. With Git at the center of your delivery pipelines, developers can make pull requests to accelerate and simplify application deployments and operations tasks to Kubernetes. - WeaveNet
 						</textarea>
+					</section>
+					<section data-background-image="img/what-is-gitops.png" data-background-color="white" data-background-size="contain">
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## GitOps
+
+							* Git == Single Source of Truth
+							* Changes are managed via Git
+							* Effectuated by a pipeline listening to Git
+							* Asynchronous, Decoupled and Explicit
+							* Audit log & rights
+						</textarea>
+					</section>
+					<section data-markdown>
+							<textarea data-template>
+								## GitOps - Principles
+
+								* entire system described declaratively
+								* canonical desired system state versioned in Git
+								* approved changes can be applied automatically
+								* agents to ensure correctness now and over time
+							</textarea>
+					</section>
+					<section data-background-image="img/gitops-model.png" data-background-color="white" data-background-size="contain">
+					</section>
+					<section data-background-image="img/gitops-jenkins-gke.svg" data-background-color="white" data-background-size="contain">
 					</section>
 				</section>
 				<section>
 					<section data-background-image="img/jenkins-x.svg" data-background-size="contain" >
-						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">Jenkins X</h1>
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">Jenkins X - Intro</h1>
 					</section>
 					<section data-markdown>
-							<textarea data-template>
-								> Dou do not need to understand Kubernetes to use Jenkins X. Jenkins X allows us to harness the power of Kubernetes without spending eternity learning the ever-growing list of the things it does.
-							</textarea>
+						<textarea data-template>
+							> You do not need to understand Kubernetes to use Jenkins X. Jenkins X allows us to harness the power of Kubernetes without spending eternity learning the ever-growing list of the things it does.
+						</textarea>
 					</section>
 					<section data-markdown>
 						<textarea data-template>
@@ -420,6 +449,7 @@
 							* Differences with Jenkins
 							* Core components
 							* Concepts
+							* Practices
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -454,12 +484,138 @@
 							* Pipeline automation
 						</textarea>
 					</section>
-					<section data-background-image="img/1_gRohJqz1BiGQD1DFDgFjDg.png" data-background-size="contain">
+					<section data-markdown>
+						<textarea data-template>
+							### Kubernetes Native
+
+							* Use Kubernetes primitives
+							* Extended with CRD's
+							* Git & Kubernetes is all you need
+							* Following evolving practices/eco system
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Based on Standards
+
+							* Use (defacto) standards
+							* Use eco system's most used tools 
+							* Working with CDF to create new standards
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Differences with Jenkins
+
+							* Only runs on Kubernetes
+							* Opinionated
+							* Does not rely on plugins
+							* CLI / API first
+							* More than CI
+							* End-to-End system
+							* Can be serverless
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Core components
+
+							* jx CLI
+							* Helm
+							* Kubernetes
+							* CRD's & Namespaces
+							* Docker Registry
+							* Chartmuseum & Monocular
+							* Nexus
+							* Skaffold
+							* Draft & BuildPacks
+							* Jenkins
+						</textarea>
+					</section>
+					<section data-background-image="img/jx-arch.png" data-background-color="white" data-background-size="contain">
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Concepts
+
+							* Faster time to market
+							* Improved deployment frequency
+							* Shorter time between fixes
+							* Lower failure rate of releases
+							* Faster Mean Time To Recovery
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Practices
+
+							* Loosely-coupled Architectures
+							* Self-service Configuration
+							* Automated Provisioning
+							* Continuous Build / Integration and Delivery
+							* Automated Release Management
+							* Incremental Testing
+							* Infrastructure Configuration as Code
+							* Comprehensive configuration management
+							* Trunk based development and feature flags
+						</textarea>
+					</section>
+					<section data-background-image="img/jx-model.png" data-background-color="white" data-background-size="contain">
+					</section>
+					<section data-background-image="img/1_gRohJqz1BiGQD1DFDgFjDg.png" data-background-color="white" data-background-size="contain">
+					</section>
+				</section>
+				<section>
+					<section data-background-image="img/jenkins-x.svg" data-background-size="contain" >
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">Jenkins X - Install</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Jenkins X - Install
+
+							* from scratch
+							* via Terraform or cloud CLI
+							* in existing cluster
+							* GitOps for JX (experimental)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Install Process
+
+							* install missing CLI's
+							* install cloud provider CLI
+							* create Kubernets cluster
+							* create `jx` namespace
+							* install Tiller (optional)
+							* setup ingress controller
+							* configure Git repositories
+							* configure secrets
+							* install tools via Helm
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Install Configuration
+
+							* isable Nexus
+							* disable Chartmuseum
+							* alternative Jenkins image
+							* alternative Docker Registry
+							* alternative Git provider
+						</textarea>
 					</section>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 						## Jenkins X - Go demo
+
+						* create JX managed application
+						* deploy to staging
+						* update via PR
+						* preview the PR
+						* merge the PR and update staging
+						* promote to production
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -570,7 +726,9 @@
 					<textarea data-template>
 						## Resources & Credits
 
-						* https://www.exoscale.com/static/syslog/2018-11-08-what-is-ci/what-is-continuous-integration.png
+						* [Viktor Farcic](https://vfarcic.github.io/#/cover)
+						* [exoscale.com - CI](https://www.exoscale.com/static/syslog/2018-11-08-what-is-ci/what-is-continuous-integration.png)
+						* [WeaveNet - What is GitOps](https://www.weave.works/technologies/gitops/#what-is-gitops)
 					</textarea>
 				</section>
 			</div>
