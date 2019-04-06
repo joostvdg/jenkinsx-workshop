@@ -620,10 +620,139 @@
 						* Static Jenkins!
 					</textarea>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Jenkins X - Import demo
-					</textarea>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Jenkins X - Import
+
+							* add to git repo
+							* create remote git repo
+							* add any missing files from Build Pack
+							* register webhook in remote repo
+							* add git repo to your Jenkins
+							* trigger the first pipeline
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Import gotchas
+
+							* can ignore draft via `--no-draft`
+							* can import GitHub org via `jx import --github...`
+							* sets default branch patterns
+								* override via `--branches "abc|xyz.*|.."
+								* and configure via `jx edit branchpattern`
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Import demo
+
+							* fork an existing application
+							* import it into Jenkins X
+							* make it work
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Jenkins X - Build Pack
+
+							* there are standard packs
+								* JX team packs
+								* community packs
+							* creating your own requires some knowledge beyond `using jx`
+								* helm
+								* draft
+							* `jx` manages Build Packs for you
+								* in `.~/.jx/draft/packs/`
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### What's inside a Build Pack
+
+							* Dockerfile
+							* Jenkinsfile
+							* Helm Chart (in `charts/${APP_NAME}` folder)
+							* Preview Helm Chart (in `charts/preview`)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### When to create a Build Pack
+
+							* only include hard requirements
+							* leave optional things out
+							* focus on the repeatable case
+							* 1, 2, many
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Create a BuildPack
+
+							* what will every micronaut require?
+							* redis? maybe not
+							* different dockerfile? yes
+							* different health check endpoint? yes
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Create Build Pack demo
+
+							* take lessons learned from Import Demo
+							* look at standard packs
+							* copy existing
+							* adjust to fit our need
+							* re-import our forked app
+							* see if it works
+						</textarea>
+					</section>
+			</section>
+				<section>
+					<section data-background-image="img/IMG_20180615_151737.jpg" >
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">SDLC Continued</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## SDLC Continued
+
+							* Versioning
+							* Workflows
+							* PR's
+							* Explicit Dependencies
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Versioning
+
+							* SemVer
+							* Automation
+							* jx-release-version
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### SemVer - Old
+
+							* Major
+							* Minor
+							* Patch
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### SemVer - CICD
+
+							* Major
+							* Minor
+							* Build
+						</textarea>
+					</section>
 				</section>
 				<section>
 					<section data-background-image="img/david-clode-507068-unsplash.jpg" >
@@ -649,6 +778,24 @@
 					<section data-markdown>
 						<textarea data-template>
 							## Helm
+
+							* package manager for Kubernetes
+							* quivalent to `yum install <package>`
+							* Kubernetes manifest template (Go templates)
+							* packaged and versioned, reffered to as `Charts`
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Use Cases
+
+							* manages packages, repo and installs
+							* manage dependencies to other Charts
+							* allows for customizing installations
+							* used as building blocks in other tools
+							* separate packaging (Chart) from runtime (application image)
+								* there's the chart version
+								* and the application version
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -664,6 +811,25 @@
 					<section data-markdown>
 						<textarea data-template>
 							## Chartmuseum
+
+							* lightweight Helm chart repository
+								* alternatives are Artifactory, Nexus 3
+							* supports different storage options
+								* local (e.g., Kubernetes volume)
+								* S3 / Minio
+								* Google Cloud Storage
+								* Azure Blob Store
+								* Alibaba Cloud OSS storage
+								* Openstack Object Storage
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Monocular
+
+							* UI for Helm repositories
+							* includes documentation and searching
+							* insight into charts installed via helm
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -671,11 +837,6 @@
 							## Tekton
 						</textarea>
 					</section>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Jenkins X - Create BuildPack
-					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
