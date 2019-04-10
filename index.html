@@ -51,6 +51,8 @@
 							* Call me `Jay`
 						</textarea>
 					</section>
+					<section data-markdown data-background-color="white" data-background-image="img/CloudBees-Logo.png" data-background-size="contain">
+					</section>
 					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg" data-background-size="contain">
 						<textarea data-template>
 							## background
@@ -93,8 +95,10 @@
 					</section>
 					<section data-markdown>
 							<textarea data-template>
-								> You do not need to understand Kubernetes to use Jenkins X. Jenkins X allows us to harness the power of Kubernetes without spending eternity learning the ever-growing list of the things it does.
+								> You do not need to understand Kubernetes to use Jenkins X. Jenkins X allows us to harness the power of Kubernetes without spending an eternity learning the ever-growing list of the things it does.
 							</textarea>
+					</section>
+					<section data-background-image="img/capabilities.png" data-background-size="contain">
 					</section>
 				</section>
 				<section>
@@ -186,7 +190,7 @@
 					</section>
 					<section data-markdown>
 						<textarea data-template>
-							## 10 Commandments
+							### 10 Commandments
 
 							* be agile
 							* refactor
@@ -197,7 +201,7 @@
 					</section>
 					<section data-markdown>
 						<textarea data-template>
-							## 10 Commandments
+							### 10 Commandments
 
 							* everything-as-code
 							* fast
@@ -221,11 +225,25 @@
 					</section>
 					<section data-markdown>
 						<textarea data-template>
-							## How
+							### How
 
 							* adopt containerization
 							* adopt schedulers
-							* 
+							* adopt serverless
+							* re-evaluate tools
+							* use tools for your workflow
+							* batteries included but swappable
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### How exactly?
+
+							* Kubernetes
+							* Jenkins X (Serverless)
+							* GitOps with Prow
+							* Helm (or drop-in replacement)
+							* Extend to suit your needs
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -249,7 +267,7 @@
 
 							> Kubernetes is a portable, extensible open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
 						</textarea>
-					</section>
+					</section>`
 					<section data-markdown>
 						<textarea data-template>
 							## Kubernetes, why?
@@ -260,6 +278,33 @@
 							* Standardization
 							* Container Orchestration
 							* Proven
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Kubernetes, How?
+
+							* Declarative instead of Imperative
+							* Self-healing
+							* High-Availability (HA)
+							* Dynamic sizing & scaling
+							* Immutable
+							* Separate state from process
+								* 12-factor app/container
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Kubernetes, How?
+
+							* Standard but Extensible
+							* Better utilization
+								* Serverless even better
+								* but more expensive for _predictable load_
+							* Dynamic Service Discovery
+							* Pets vs Cattle
+							* Batteries included but swappable
+							* Layers of Abstraction
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -367,10 +412,39 @@
 						</section>
 						<section data-markdown>
 							<textarea data-template>
+								### Volume options
+	
+								* ...
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
 								## Networking
 	
 								* 1 Pod = 1 IP
 								* DNS
+								* Services
+								* Ingress
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								### DNS hierarchy
+	
+								* ...
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								### Services options
+	
+								* ...
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								### Ingress options
+	
 								* ...
 							</textarea>
 						</section>
@@ -378,18 +452,56 @@
 							<textarea data-template>
 								## LifeCycle
 
-								* healthcheck
-								* restart
-								* ??
-								</textarea>
+								* labels & annotations
+								* readiness & health probes
+								* restart policies
+								* PV reclaim policies
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								### Labels
+	
+								* ...
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								### Annotations
+	
+								* ...
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								### Probe options
+	
+								* ...
+							</textarea>
 						</section>
 						<section data-markdown>
 							<textarea data-template>
 								## Scheduling
 	
 								* request & limits
-								* quotas
-								* ?
+								* namespaces & quotas
+								* selectors
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								### Requests & Limits
+	
+								* Classification: best effort, guaranteed, burst
+								* ...
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								## Resource, API & Action
+	
+								* See: https://vfarcic.github.io/devops23/workshop-short.html#/11/2
+								* ...
 							</textarea>
 						</section>
 				</section>
@@ -408,7 +520,17 @@
 					</section>
 					<section data-markdown>
 						<textarea data-template>
-							## GitOps
+							### Principles
+
+							* entire system described declaratively
+							* canonical desired system state versioned in Git
+							* approved changes can be applied automatically
+							* agents to ensure correctness now and over time
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### What it comes down to
 
 							* Git == Single Source of Truth
 							* Changes are managed via Git
@@ -417,19 +539,11 @@
 							* Audit log & rights
 						</textarea>
 					</section>
-					<section data-markdown>
-							<textarea data-template>
-								## GitOps - Principles
-
-								* entire system described declaratively
-								* canonical desired system state versioned in Git
-								* approved changes can be applied automatically
-								* agents to ensure correctness now and over time
-							</textarea>
-					</section>
 					<section data-background-image="img/gitops-model.png" data-background-color="white" data-background-size="contain">
 					</section>
 					<section data-background-image="img/gitops-jenkins-gke.svg" data-background-color="white" data-background-size="contain">
+					</section>
+					<section data-background-image="img/abstract-build-cluster.png" data-background-color="white" data-background-size="contain">
 					</section>
 				</section>
 				<section>
@@ -711,7 +825,23 @@
 							* see if it works
 						</textarea>
 					</section>
-			</section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Explore .jx folder
+
+						* cloud-environments
+						* environments
+						* jenkins-x-versions
+						* jx.lock
+						* adminSecrets.yaml 
+						* chartmuseumAuth.yaml
+						* gitAuth.yaml
+						* jenkinsAuth.yaml
+						* draft
+						* plugins
+					</textarea>
+				</section>
 				<section>
 					<section data-background-image="img/IMG_20180615_151737.jpg" >
 						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">SDLC Continued</h1>
@@ -723,7 +853,6 @@
 							* Versioning
 							* Workflows
 							* PR's
-							* Explicit Dependencies
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -733,6 +862,7 @@
 							* SemVer
 							* Automation
 							* jx-release-version
+							* Explicit Dependencies
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -787,7 +917,7 @@
 					</section>
 					<section data-markdown>
 						<textarea data-template>
-							## Use Cases
+							### Helm - Use Cases
 
 							* manages packages, repo and installs
 							* manage dependencies to other Charts
@@ -837,6 +967,11 @@
 							## Tekton
 						</textarea>
 					</section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - Dev Workflow
+					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
