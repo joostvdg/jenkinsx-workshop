@@ -42,7 +42,9 @@
 							## whomai
 						</textarea>
 					</section>
-					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg" data-background-size="contain">
+					<section data-markdown data-background-color="white" data-background-image="img/CloudBees-Logo.png" data-background-size="contain">
+					</section>
+					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg" >
 						<textarea data-template>
 							### Joost van der Griendt
 
@@ -52,16 +54,32 @@
 							* Call me `Jay`
 						</textarea>
 					</section>
-					<section data-markdown data-background-color="white" data-background-image="img/CloudBees-Logo.png" data-background-size="contain">
-					</section>
-					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg" data-background-size="contain">
+					<section data-markdown data-background-image="img/friso-baaij-1321394-unsplash.jpg" >
 						<textarea data-template>
-							## background
+							### background
 
 							* Java developer
 							* CI/CD
 							* Jenkins / Nexus / Sonar
 							* Docker / Docker Swarm / Kubernetes
+						</textarea>
+					</section>
+					<section data-markdown data-background-image="img/john-duncan-1143279-unsplash.jpg" >
+						<textarea data-template>
+							### Kenny Younger
+
+							* Work for CloudBees
+							* Technical Success Manager U.S.A.
+							* Recently moved to Fort Worth, TX
+						</textarea>
+					</section>
+					<section data-markdown data-background-image="img/john-duncan-1143279-unsplash.jpg" >
+						<textarea data-template>
+							### background
+
+							* Software Engineer
+							* Spring Boot / Apache Camel / BDD
+							* OSS Jenkins (on Windows!)
 						</textarea>
 					</section>
 				</section>
@@ -573,66 +591,109 @@
 				<section data-markdown>
 					<textarea data-template>
 						## ConfigMaps
+
+						> ConfigMaps bind configuration files, command-line arguments, environment variables, port numbers, and other configuration artifacts to your Pods' containers and system components at runtime. 
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						### 
+						### ConfigMaps
+
+						* Separate config from Pods<!-- .element: class="fragment" -->
+						* Update config separately<!-- .element: class="fragment" -->
+						* Allows overriding container defaults<!-- .element: class="fragment" -->
+						* Do **not** use for confidential data!<!-- .element: class="fragment" -->
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### ConfigMaps
+
+						* from files<!-- .element: class="fragment" -->
+						* from literals<!-- .element: class="fragment" -->
+						* from environment files<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 						## Secrets
+
+						> A Secret is an object that contains a small amount of sensitive data such as a password, a token, or a key.
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						### 
+						### Secrets
+
+						* from literal<!-- .element: class="fragment" -->
+						* usename & password<!-- .element: class="fragment" -->
+						* from file<!-- .element: class="fragment" -->
+						* docker pull credentials<!-- .element: class="fragment" -->
+						* certificates<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 						## Namespaces
+
+						> Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces.
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 						### Namespaces
+
+						* there is always a 'default'<!-- .element: class="fragment" -->
+						* there are a few namespaces by default<!-- .element: class="fragment" -->
+						* helps separate users or environments<!-- .element: class="fragment" -->
+						* is part of K8S DNS structuring<!-- .element: class="fragment" -->
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Namespaces
+
+						* is part of your **context**<!-- .element: class="fragment" -->
+						* there are tools who help with this<!-- .element: class="fragment" -->
+						* including jx<!-- .element: class="fragment" -->
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Securing Kubernetes
+
+						* Users<!-- .element: class="fragment" -->
+						* ServiceAccounts<!-- .element: class="fragment" -->
+						* Roles<!-- .element: class="fragment" -->
+						* ClusterRoles<!-- .element: class="fragment" -->
+						* RoleBinding<!-- .element: class="fragment" -->
+						* ClusterRoleBinding<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 						## ResourceManagement
+
+						* Memory<!-- .element: class="fragment" -->
+						* CPU <!-- .element: class="fragment" -->
+						* Requests & Limits<!-- .element: class="fragment" -->
+						* QoS: best effort, guaranteed, burst<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						### Requests & Limits
+						### Configure defaults
 
-						* Classification: best effort, guaranteed, burst
+						* LimitRange<!-- .element: class="fragment" -->
+						* Quotas<!-- .element: class="fragment" -->
+						* Measure, Measure<!-- .element: class="fragment" -->
+						* And yes, measure<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
 			</section>
 			<section>
 				<section data-background-image="img/chuttersnap-458795-unsplash.jpg" data-background-size="contain">
 					<h1 style="color:darkorange;background-color: white;opacity: 0.8;">Kubernetes Part III</h1>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## StatefulSet
-
-						> Like a Deployment , a StatefulSet manages Pods that are based on an identical container spec. Unlike a Deployment, a StatefulSet maintains a sticky identity for each of their Pods.
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						### 
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						### 
-					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
@@ -646,26 +707,39 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						### Volume options
+						### Volume
 
-						
+						* StorageClasses<!-- .element: class="fragment" -->
+						* Provisioners<!-- .element: class="fragment" -->
+						* Types of volumes<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						### 
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						### 
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						### Annotations
+						### Volume Types<!-- .element: class="fragment" -->
 
-						* ...
+						* emptyDir<!-- .element: class="fragment" -->
+						* configMap<!-- .element: class="fragment" -->
+						* local<!-- .element: class="fragment" -->
+						* nfs<!-- .element: class="fragment" -->
+						* [many more](https://kubernetes.io/docs/concepts/storage/volumes/#types-of-volumes)<!-- .element: class="fragment" -->
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## StatefulSet
+
+						> Like a Deployment , a StatefulSet manages Pods that are based on an identical container spec. Unlike a Deployment, a StatefulSet maintains a sticky identity for each of their Pods.
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### StatefulSet
+
+						* used for stateful applications<!-- .element: class="fragment" -->
+						* wraps around ReplicaSet<!-- .element: class="fragment" -->
+						* uses volumes differently<!-- .element: class="fragment" -->
+						* manages pods differently<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
 			</section>
