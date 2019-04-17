@@ -680,16 +680,16 @@
 						* QoS: best effort, guaranteed, burst<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
-				<section data-markdown>
+				<!-- <section data-markdown>
 					<textarea data-template>
 						### Configure defaults
 
-						* LimitRange<!-- .element: class="fragment" -->
-						* Quotas<!-- .element: class="fragment" -->
-						* Measure, Measure<!-- .element: class="fragment" -->
-						* And yes, measure<!-- .element: class="fragment" -->
+						* LimitRange
+						* Quotas
+						* Measure, Measure
+						* And yes, measure
 					</textarea>
-				</section>
+				</section> -->
 			</section>
 			<section>
 				<section data-background-image="img/chuttersnap-458795-unsplash.jpg" data-background-size="contain">
@@ -798,10 +798,10 @@
 							## Jenkins X - Introduction
 
 							* What is Jenkins Jenkins X<!-- .element: class="fragment" -->
+							* Environments<!-- .element: class="fragment" -->
+							* Pipelines<!-- .element: class="fragment" -->
 							* Differences with Jenkins<!-- .element: class="fragment" -->
 							* Core components<!-- .element: class="fragment" -->
-							* Concepts<!-- .element: class="fragment" -->
-							* Practices<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -857,6 +857,39 @@
 					</section>
 					<section data-markdown>
 						<textarea data-template>
+							### Environments
+
+							* dev = your machine + jx namespace<!-- .element: class="fragment" -->
+							* staging<!-- .element: class="fragment" -->
+							* production<!-- .element: class="fragment" -->
+							* preview<!-- .element: class="fragment" -->
+							* on-demand-just-for-test<!-- .element: class="fragment" -->
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Pipelines
+
+							* as code -> Jenkinsfile<!-- .element: class="fragment" -->
+							* containerized<!-- .element: class="fragment" -->
+							* pipeline/multi-branch/github org<!-- .element: class="fragment" -->
+							* best practices<!-- .element: class="fragment" -->
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Pipeline - Best Practices
+
+							* use shell<!-- .element: class="fragment" -->
+							* able to run locally<!-- .element: class="fragment" -->
+							* declarative format<!-- .element: class="fragment" -->
+							* jx step<!-- .element: class="fragment" -->
+						</textarea>
+					</section>
+					<section data-background-image="img/jx-arch.png" data-background-color="white" data-background-size="contain">
+					</section>
+					<section data-markdown>
+						<textarea data-template>
 							### Differences with Jenkins
 
 							* Only runs on Kubernetes<!-- .element: class="fragment" -->
@@ -883,19 +916,6 @@
 							* Skaffold<!-- .element: class="fragment" -->
 							* Draft & BuildPacks<!-- .element: class="fragment" -->
 							* Jenkins<!-- .element: class="fragment" -->
-						</textarea>
-					</section>
-					<section data-background-image="img/jx-arch.png" data-background-color="white" data-background-size="contain">
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							### Concepts
-
-							* Faster time to market<!-- .element: class="fragment" -->
-							* Improved deployment frequency<!-- .element: class="fragment" -->
-							* Shorter time between fixes<!-- .element: class="fragment" -->
-							* Lower failure rate of releases<!-- .element: class="fragment" -->
-							* Faster Mean Time To Recovery<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -972,6 +992,8 @@
 						* Static Jenkins!<!-- .element: class="fragment" -->
 					</textarea>
 				</section>
+				<section data-background-image="img/1_gRohJqz1BiGQD1DFDgFjDg.png" data-background-color="white" data-background-size="contain">
+				</section>
 				<section>
 					<section data-markdown>
 						<textarea data-template>
@@ -989,9 +1011,9 @@
 						<textarea data-template>
 							## Import gotchas
 
-							* can ignore draft via `--no-draft`
-							* can import GitHub org via `jx import --github...`
-							* sets default branch patterns
+							* can ignore draft via `--no-draft`<!-- .element: class="fragment" -->
+							* can import GitHub org via `jx import --github...`<!-- .element: class="fragment" -->
+							* sets default branch patterns<!-- .element: class="fragment" -->
 								* override via `--branches "abc|xyz.*|.."
 								* and configure via `jx edit branchpattern`
 						</textarea>
@@ -1000,9 +1022,9 @@
 						<textarea data-template>
 							### Import demo
 
-							* fork an existing application
-							* import it into Jenkins X
-							* make it work
+							* fork an existing application<!-- .element: class="fragment" -->
+							* import it into Jenkins X<!-- .element: class="fragment" -->
+							* make it work<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
 				</section>
@@ -1011,13 +1033,13 @@
 						<textarea data-template>
 							## Jenkins X - Build Pack
 
-							* there are standard packs
+							* there are standard packs<!-- .element: class="fragment" -->
 								* JX team packs
 								* community packs
-							* creating your own requires some knowledge beyond `using jx`
+							* creating your own requires some knowledge beyond `using jx`<!-- .element: class="fragment" -->
 								* helm
 								* draft
-							* `jx` manages Build Packs for you
+							* `jx` manages Build Packs for you<!-- .element: class="fragment" -->
 								* in `.~/.jx/draft/packs/`
 						</textarea>
 					</section>
@@ -1045,22 +1067,22 @@
 						<textarea data-template>
 							### Create a BuildPack
 
-							* what will every micronaut require?
-							* redis? maybe not
-							* different dockerfile? yes
-							* different health check endpoint? yes
+							* what will every micronaut require?<!-- .element: class="fragment" -->
+							* redis? maybe not<!-- .element: class="fragment" -->
+							* different dockerfile? yes<!-- .element: class="fragment" -->
+							* different health check endpoint? yes<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
 					<section data-markdown>
 						<textarea data-template>
 							### Create Build Pack demo
 
-							* take lessons learned from Import Demo
-							* look at standard packs
-							* copy existing
-							* adjust to fit our need
-							* re-import our forked app
-							* see if it works
+							* take lessons learned from Import Demo<!-- .element: class="fragment" -->
+							* look at standard packs<!-- .element: class="fragment" -->
+							* copy existing<!-- .element: class="fragment" -->
+							* adjust to fit our need<!-- .element: class="fragment" -->
+							* re-import our forked app<!-- .element: class="fragment" -->
+							* see if it works<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
 				</section>
@@ -1088,39 +1110,110 @@
 						<textarea data-template>
 							## SDLC Continued
 
-							* Versioning
-							* Workflows
-							* PR's
+							* Versioning<!-- .element: class="fragment" -->
+							* Package & Publish<!-- .element: class="fragment" -->
+							* Workflows<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
 					<section data-markdown>
 						<textarea data-template>
 							### Versioning
 
-							* SemVer
-							* Automation
-							* jx-release-version
-							* Explicit Dependencies
+							* SemVer<!-- .element: class="fragment" -->
+							* Automation<!-- .element: class="fragment" -->
+							* jx-release-version<!-- .element: class="fragment" -->
+							* Explicit Dependencies<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
 					<section data-markdown>
 						<textarea data-template>
 							### SemVer - Old
 
-							* Major
-							* Minor
-							* Patch
+							* Major<!-- .element: class="fragment" -->
+							* Minor<!-- .element: class="fragment" -->
+							* Patch<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
 					<section data-markdown>
 						<textarea data-template>
 							### SemVer - CICD
 
-							* Major
-							* Minor
-							* Build
+							* Major<!-- .element: class="fragment" -->
+							* Minor<!-- .element: class="fragment" -->
+							* Build<!-- .element: class="fragment" -->
 						</textarea>
 					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Package & Publish
+
+							* No rebuilding<!-- .element: class="fragment" -->
+							* Signify release candidate<!-- .element: class="fragment" -->
+							* Explicit Dependency Management<!-- .element: class="fragment" -->
+							* Inspection before deployment<!-- .element: class="fragment" -->
+							* Inspection later...t<!-- .element: class="fragment" -->
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Workflow
+
+							* commit<!-- .element: class="fragment" -->
+							* build<!-- .element: class="fragment" -->
+							* PR<!-- .element: class="fragment" -->
+							* preview<!-- .element: class="fragment" -->
+							* review<!-- .element: class="fragment" -->
+							* merge<!-- .element: class="fragment" -->
+							* build<!-- .element: class="fragment" -->
+							* promote<!-- .element: class="fragment" -->
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-background-image="img/xfiles.jpg" >
+						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">The X-Files</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Mulder
+
+							* fork & clone
+							* import into jx
+							* fix redis config
+							* fix health check endpoint
+							* add unit tests to pipeline
+							* add integration tests to pipeline
+							* test PR
+							* test staging & production
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Scully
+
+							* fork & clone
+							* jx import
+							* fix Dockerfile
+							* add Mulder as dependency
+								* helm repo stuff
+							* fix url to Mulder
+							* click on Scully's "voice box" to get a quote...
+						</textarea>
+					</section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - Dev Workflow
+
+						* ??
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Jenkins X - Build With Kaniko
+
+						* why?
+					</textarea>
 				</section>
 				<section>
 					<section data-background-image="img/david-clode-507068-unsplash.jpg" >
@@ -1205,48 +1298,6 @@
 							## Tekton
 						</textarea>
 					</section>
-				</section>
-				<section>
-					<section data-background-image="img/xfiles.jpg" >
-						<h1 style="color:darkorange;background-color: white;opacity: 0.8;">The X-Files</h1>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							## Mulder
-
-							* fork & clone
-							* import into jx
-							* fix redis config
-							* fix health check endpoint
-							* add unit tests to pipeline
-							* add integration tests to pipeline
-							* test PR
-							* test staging & production
-						</textarea>
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							## Scully
-
-							* fork & clone
-							* jx import
-							* fix Dockerfile
-							* add Mulder as dependency
-								* helm repo stuff
-							* fix url to Mulder
-							* click on Scully's "voice box" to get a quote...
-						</textarea>
-					</section>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Jenkins X - Dev Workflow
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Jenkins X - Build With Kaniko
-					</textarea>
 				</section>
 				<section>
 					<section data-background-image="img/markos-mant-672369-unsplash.jpg" >
